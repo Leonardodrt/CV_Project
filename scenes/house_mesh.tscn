@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [sub_resource type="BoxShape" id=1]
 
@@ -8,6 +8,10 @@
 
 [sub_resource type="CubeMesh" id=4]
 size = Vector3( 50, 2, 50 )
+
+[sub_resource type="CubeMesh" id=5]
+
+[sub_resource type="BoxShape" id=6]
 
 [node name="House" type="Spatial"]
 
@@ -30,6 +34,15 @@ shape = SubResource( 3 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Floor"]
 mesh = SubResource( 4 )
+
+[node name="Wall1" type="StaticBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.81262, 0 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Wall1"]
+mesh = SubResource( 5 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Wall1"]
+shape = SubResource( 6 )
 
 [node name="Floor4" type="StaticBody" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -50, 0, 0 )
