@@ -1,0 +1,59 @@
+[gd_scene load_steps=5 format=2]
+
+[sub_resource type="BoxShape" id=1]
+
+[sub_resource type="CubeMesh" id=2]
+
+[sub_resource type="BoxShape" id=3]
+
+[sub_resource type="CubeMesh" id=4]
+size = Vector3( 50, 2, 50 )
+
+[node name="House" type="Spatial"]
+
+[node name="Box_Test" type="RigidBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.5244, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Box_Test"]
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Box_Test"]
+mesh = SubResource( 2 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 3.50428, -23.1098 )
+
+[node name="Floor" type="StaticBody" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="Floor"]
+shape = SubResource( 3 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Floor"]
+mesh = SubResource( 4 )
+
+[node name="Floor4" type="StaticBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -50, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Floor4"]
+shape = SubResource( 3 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Floor4"]
+mesh = SubResource( 4 )
+
+[node name="Floor3" type="StaticBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Floor3"]
+shape = SubResource( 3 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Floor3"]
+mesh = SubResource( 4 )
+
+[node name="Floor2" type="StaticBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 50 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Floor2"]
+shape = SubResource( 3 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Floor2"]
+mesh = SubResource( 4 )
