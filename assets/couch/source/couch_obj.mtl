@@ -1,0 +1,28 @@
+# Blender MTL File: 'None'
+# Material Count: 2
+
+newmtl Couch
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump -bm 0.000000 C:\\Users\\Star-touch\\Documents\\University\\Master's\\Year 1\\Semestre 1\\Computação Visual\\Projects assets\\couch\\textures\\couch_lp_Couch_Normal.jpg
+map_Kd C:\\Users\\Star-touch\\Documents\\University\\Master's\\Year 1\\Semestre 1\\Computação Visual\\Projects assets\\couch\\textures\\couch_lp_Couch_BaseColor.jpg
+map_Ns C:\\Users\\Star-touch\\Documents\\University\\Master's\\Year 1\\Semestre 1\\Computação Visual\\Projects assets\\couch\\textures\\couch_lp_Couch_Roughness.jpg
+refl C:\\Users\\Star-touch\\Documents\\University\\Master's\\Year 1\\Semestre 1\\Computação Visual\\Projects assets\\couch\\textures\\couch_lp_Couch_Metallic.jpg
+
+newmtl blanket
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\Star-touch\\Documents\\University\\Master's\\Year 1\\Semestre 1\\Computação Visual\\Projects assets\\couch\\textures\\blanked_and_piloowlp_blanket_BaseColor.jpg
+map_Ns C:\\Users\\Star-touch\\Documents\\University\\Master's\\Year 1\\Semestre 1\\Computação Visual\\Projects assets\\couch\\textures\\blanked_and_piloowlp_blanket_Roughness.jpg

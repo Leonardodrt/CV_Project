@@ -22,7 +22,7 @@ func _physics_process(delta: float) -> void:
 	
 	move_direction = Vector3(Input.get_axis("left","right"), 0, Input.get_axis("back", "forward")).normalized().rotated(Vector3.UP, - rotation.z)
 	
-	velocity.x = move_direction.x
+	velocity.x = -move_direction.x
 	velocity.z = move_direction.z
 	
 	velocity = move_and_slide(velocity * speed, Vector3.UP)

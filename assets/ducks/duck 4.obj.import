@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/duck 4.obj-135d3338c600e5cdfdf3e25305aa3af2.mesh"
+
+[deps]
+
+files=[ "res://.import/duck 4.obj-135d3338c600e5cdfdf3e25305aa3af2.mesh" ]
+
+source_file="res://assets/ducks/duck 4.obj"
+dest_files=[ "res://.import/duck 4.obj-135d3338c600e5cdfdf3e25305aa3af2.mesh", "res://.import/duck 4.obj-135d3338c600e5cdfdf3e25305aa3af2.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286
