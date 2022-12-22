@@ -1,6 +1,8 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://scenes/character.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/bedside table/source/bedside table.obj" type="ArrayMesh" id=10]
+[ext_resource path="res://assets/desk lamp/source/desklamp_obj.obj" type="ArrayMesh" id=11]
 
 [sub_resource type="BoxShape" id=3]
 
@@ -254,3 +256,14 @@ mesh = SubResource( 4 )
 
 [node name="Character" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -1.91268, 2.5558, -10.4929 )
+
+[node name="bedside table" type="MeshInstance" parent="."]
+transform = Transform( 1.47721, 0, -0.260472, 0, 1.5, 0, 0.260472, 0, 1.47721, 10.1695, 0.875811, 69.9939 )
+mesh = ExtResource( 10 )
+
+[node name="desklamp_obj" type="MeshInstance" parent="."]
+transform = Transform( 5.65685, 0, 5.65685, 0, 8, 0, -5.65685, 0, 5.65685, 11.1803, 6.90901, 70.0456 )
+mesh = ExtResource( 11 )
+
+[node name="SpotLight" type="SpotLight" parent="desklamp_obj"]
+transform = Transform( 0.125, 0, 0, 0, -5.46392e-09, 0.125, 0, -0.125, -5.46392e-09, 0.00517845, 0.242921, 0.00517845 )
