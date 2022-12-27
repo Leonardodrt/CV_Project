@@ -1,0 +1,96 @@
+# Blender MTL File: 'None'
+# Material Count: 8
+
+newmtl blanket
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump C:\\Users\\Star-touch\\Documents\\University\\Master's\\Year 1\\Semestre 1\\Computação Visual\\Projects assets\\assets\\bed\\textures\\blanket_Normal_OpenGL.png
+map_Kd C:\\Users\\Star-touch\\Documents\\University\\Master's\\Year 1\\Semestre 1\\Computação Visual\\Projects assets\\assets\\bed\\textures\\blanket_Base_color.png
+
+newmtl cover_bottom
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump C:\\Users\\Star-touch\\Documents\\University\\Master's\\Year 1\\Semestre 1\\Computação Visual\\Projects assets\\assets\\bed\\textures\\cover_bottom_Normal_OpenGL.png
+map_Kd C:\\Users\\Star-touch\\Documents\\University\\Master's\\Year 1\\Semestre 1\\Computação Visual\\Projects assets\\assets\\bed\\textures\\cover_bottom_Base_color.png
+
+newmtl cover_top
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump C:\\Users\\Star-touch\\Documents\\University\\Master's\\Year 1\\Semestre 1\\Computação Visual\\Projects assets\\assets\\bed\\textures\\cover_top_Normal_OpenGL.png
+map_Kd C:\\Users\\Star-touch\\Documents\\University\\Master's\\Year 1\\Semestre 1\\Computação Visual\\Projects assets\\assets\\bed\\textures\\cover_top_Base_color.png
+
+newmtl cushions
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump C:\\Users\\Star-touch\\Documents\\University\\Master's\\Year 1\\Semestre 1\\Computação Visual\\Projects assets\\assets\\bed\\textures\\cushions_Normal_OpenGL.png
+map_Kd C:\\Users\\Star-touch\\Documents\\University\\Master's\\Year 1\\Semestre 1\\Computação Visual\\Projects assets\\assets\\bed\\textures\\cushions_Base_color.png
+
+newmtl mattress
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump C:\\Users\\Star-touch\\Documents\\University\\Master's\\Year 1\\Semestre 1\\Computação Visual\\Projects assets\\assets\\bed\\textures\\mattress_Normal_OpenGL.png
+map_Kd C:\\Users\\Star-touch\\Documents\\University\\Master's\\Year 1\\Semestre 1\\Computação Visual\\Projects assets\\assets\\bed\\textures\\mattress_Base_color.png
+
+newmtl pillows
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.057805 0.057805 0.057805
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump folder\\pillows_Normal_OpenGL.png
+
+newmtl sheet
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.057805 0.057805 0.057805
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump folder\\sheet_Normal_OpenGL.png
+
+newmtl wood
+Ns 236.600484
+Ka 1.000000 1.000000 1.000000
+Kd 0.157618 0.099997 0.075815
+Ks 0.421818 0.421818 0.421818
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump C:\\Users\\Star-touch\\Documents\\University\\Master's\\Year 1\\Semestre 1\\Computação Visual\\Projects assets\\assets\\bed\\textures\\wood_Normal_OpenGL.png
+map_Kd C:\\Users\\Star-touch\\Documents\\University\\Master's\\Year 1\\Semestre 1\\Computação Visual\\Projects assets\\assets\\bed\\textures\\wood_Base_color.png
