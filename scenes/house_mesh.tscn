@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=39 format=2]
 
 [ext_resource path="res://scenes/character.tscn" type="PackedScene" id=1]
 [ext_resource path="res://textures/floor1/1K-Square Pattern Parquet_10_baseColor.jpg" type="Texture" id=2]
@@ -22,6 +22,9 @@
 [ext_resource path="res://assets/bed/textures/sheet_Normal_OpenGL.png" type="Texture" id=20]
 [ext_resource path="res://assets/bed/textures/cover_top_Base_color.png" type="Texture" id=21]
 [ext_resource path="res://assets/bed/textures/cover_top_Normal_OpenGL.png" type="Texture" id=22]
+[ext_resource path="res://assets/couch/source/couch_obj.obj" type="ArrayMesh" id=23]
+[ext_resource path="res://assets/couch/source/Couch.material" type="Material" id=24]
+[ext_resource path="res://assets/couch/source/blanket.material" type="Material" id=25]
 
 [sub_resource type="BoxShape" id=3]
 
@@ -92,6 +95,7 @@ normal_scale = 1.0
 normal_texture = ExtResource( 19 )
 
 [node name="House" type="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.02537, 0 )
 
 [node name="Floor" type="StaticBody" parent="."]
 
@@ -157,9 +161,10 @@ mesh = SubResource( 5 )
 shape = SubResource( 6 )
 
 [node name="Door3" type="StaticBody" parent="."]
-transform = Transform( 0.769444, 0, 2.49099, 0, 5, 0, -0.638714, 0, 3.00083, -21.1917, 5.78602, 0.523237 )
+transform = Transform( 0.378374, 0, 3.61005, 0, 5, 0, -0.925653, 0, 1.47565, -21.1917, 5.78602, -3.70835 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Door3"]
+transform = Transform( 0.930149, 0, 1.43201, 0, 1, 0, -0.0941495, 0, 0.930148, 0, 0, 0 )
 mesh = SubResource( 5 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Door3"]
@@ -361,3 +366,9 @@ material/5 = SubResource( 12 )
 material/6 = SubResource( 13 )
 material/7 = SubResource( 14 )
 material/8 = SubResource( 15 )
+
+[node name="couch_obj" type="MeshInstance" parent="."]
+transform = Transform( -6, 0, -9.05975e-07, 0, 6, 0, 9.05975e-07, 0, -6, -48.9735, 4.02987, 19.5614 )
+mesh = ExtResource( 23 )
+material/0 = ExtResource( 24 )
+material/1 = ExtResource( 25 )
