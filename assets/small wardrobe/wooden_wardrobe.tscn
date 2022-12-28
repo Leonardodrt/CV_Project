@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/small wardrobe/wooden_wardrobe.glb" type="PackedScene" id=1]
+[ext_resource path="res://scripts/wooden_wardrobe.gd" type="Script" id=2]
+
+[node name="wooden_wardrobe" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="Right_door" parent="Sketchfab_model/6800099287574dce8782268acf46f3b3fbx/Object_2/RootNode" index="1"]
+transform = Transform( -0.033307, -0.999445, 0, 0, 0, 1, -0.999445, 0.0333069, 0, 21.7599, 12.2406, 12.1497 )
+
+[node name="Left_door" parent="Sketchfab_model/6800099287574dce8782268acf46f3b3fbx/Object_2/RootNode" index="2"]
+transform = Transform( -0.670284, 0.742105, 0, 0, 5.96046e-08, 1, 0.742105, 0.670284, 5.96046e-08, -21.9957, 12.2406, 12.1514 )
+
+[node name="AnimationPlayer" parent="." index="1"]
+autoplay = "Open-Close"
