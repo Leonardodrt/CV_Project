@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=2]
+[gd_scene load_steps=49 format=2]
 
 [ext_resource path="res://scenes/character.tscn" type="PackedScene" id=1]
 [ext_resource path="res://textures/floor1/1K-Square Pattern Parquet_10_baseColor.jpg" type="Texture" id=2]
@@ -25,6 +25,13 @@
 [ext_resource path="res://assets/couch/source/couch_obj.obj" type="ArrayMesh" id=23]
 [ext_resource path="res://assets/couch/source/Couch.material" type="Material" id=24]
 [ext_resource path="res://assets/couch/source/blanket.material" type="Material" id=25]
+[ext_resource path="res://assets/oriental shelf/source/Shelf/lambert1.material" type="Material" id=26]
+[ext_resource path="res://assets/oriental shelf/source/Shelf/shelf_obj.obj" type="ArrayMesh" id=27]
+[ext_resource path="res://assets/ducks/duck.png" type="Texture" id=28]
+[ext_resource path="res://assets/ducks/duck full.obj" type="ArrayMesh" id=29]
+[ext_resource path="res://assets/ducks/duck 2.obj" type="ArrayMesh" id=30]
+[ext_resource path="res://assets/ducks/duck 3.obj" type="ArrayMesh" id=31]
+[ext_resource path="res://assets/ducks/duck 4.obj" type="ArrayMesh" id=32]
 
 [sub_resource type="BoxShape" id=3]
 
@@ -93,6 +100,15 @@ albedo_color = Color( 0.835294, 0.772549, 0.772549, 1 )
 normal_enabled = true
 normal_scale = 1.0
 normal_texture = ExtResource( 19 )
+
+[sub_resource type="SpatialMaterial" id=16]
+albedo_texture = ExtResource( 28 )
+
+[sub_resource type="SpatialMaterial" id=17]
+albedo_texture = ExtResource( 28 )
+
+[sub_resource type="SpatialMaterial" id=18]
+albedo_texture = ExtResource( 28 )
 
 [node name="House" type="Spatial"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.02537, 0 )
@@ -372,3 +388,32 @@ transform = Transform( -6, 0, -9.05975e-07, 0, 6, 0, 9.05975e-07, 0, -6, -48.973
 mesh = ExtResource( 23 )
 material/0 = ExtResource( 24 )
 material/1 = ExtResource( 25 )
+
+[node name="shelf_obj" type="MeshInstance" parent="."]
+transform = Transform( 50, 0, 0, 0, 50, 0, 0, 0, 50, -71.6513, 1.26014, 7.93991 )
+mesh = ExtResource( 27 )
+material/0 = ExtResource( 26 )
+
+[node name="shelf_obj2" type="MeshInstance" parent="."]
+transform = Transform( 50, 0, 0, 0, 50, 0, 0, 0, 50, -71.6513, 1.08111, -10.8708 )
+mesh = ExtResource( 27 )
+material/0 = ExtResource( 26 )
+
+[node name="duck full" type="MeshInstance" parent="."]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -71.9989, 7.61125, 9.90775 )
+mesh = ExtResource( 29 )
+
+[node name="duck 2" type="MeshInstance" parent="."]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -72.0003, 7.61295, 8.73471 )
+mesh = ExtResource( 30 )
+material/0 = SubResource( 16 )
+
+[node name="duck 3" type="MeshInstance" parent="."]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -71.8808, 7.60357, 7.51043 )
+mesh = ExtResource( 31 )
+material/0 = SubResource( 17 )
+
+[node name="duck 4" type="MeshInstance" parent="."]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -71.9591, 7.54984, 6.19194 )
+mesh = ExtResource( 32 )
+material/0 = SubResource( 18 )
