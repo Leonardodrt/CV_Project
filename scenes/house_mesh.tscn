@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=2]
+[gd_scene load_steps=56 format=2]
 
 [ext_resource path="res://scenes/character.tscn" type="PackedScene" id=1]
 [ext_resource path="res://textures/floor1/1K-Square Pattern Parquet_10_baseColor.jpg" type="Texture" id=2]
@@ -38,6 +38,7 @@
 [ext_resource path="res://assets/glass table/source/glass_table_obj.obj" type="ArrayMesh" id=36]
 [ext_resource path="res://assets/tv cabinet/source/tvcabinet.glb" type="PackedScene" id=37]
 [ext_resource path="res://assets/setup/source/gamingsetup.tscn" type="PackedScene" id=38]
+[ext_resource path="res://assets/rug/rug.tscn" type="PackedScene" id=39]
 
 [sub_resource type="BoxShape" id=3]
 
@@ -117,7 +118,7 @@ albedo_texture = ExtResource( 28 )
 albedo_texture = ExtResource( 28 )
 
 [node name="House" type="Spatial"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.02537, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.23029, -2.92914, 11.1863 )
 
 [node name="Floor" type="StaticBody" parent="."]
 
@@ -128,8 +129,7 @@ shape = SubResource( 3 )
 mesh = SubResource( 4 )
 
 [node name="ceiling" type="StaticBody" parent="."]
-transform = Transform( 3, 0, 0, 0, 1, 0, 0, 0, 2, 0, 12.0297, 25.0011 )
-visible = false
+transform = Transform( 3, 0, 0, 0, 1, 0, 0, 0, 2, 0, 15.3786, 25.0011 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ceiling"]
 shape = SubResource( 3 )
@@ -138,7 +138,7 @@ shape = SubResource( 3 )
 mesh = SubResource( 4 )
 
 [node name="Wall1" type="StaticBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 5, 0, 0, 0, 11, 26.0032, 6.02236, 13.986 )
+transform = Transform( 1, 0, 0, 0, 10, 0, 0, 0, 11, 26.0032, 6.02236, 13.986 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Wall1"]
 mesh = SubResource( 5 )
@@ -147,7 +147,7 @@ mesh = SubResource( 5 )
 shape = SubResource( 6 )
 
 [node name="Wall3" type="StaticBody" parent="."]
-transform = Transform( -4.37114e-08, 0, 10, 0, 5, 0, -1, 0, -4.37114e-07, 14.9865, 6.02236, 24.0026 )
+transform = Transform( -4.37114e-08, 0, 10, 0, 10, 0, -1, 0, -4.37114e-07, 14.9865, 6.02236, 24.0026 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Wall3"]
 mesh = SubResource( 5 )
@@ -156,7 +156,7 @@ mesh = SubResource( 5 )
 shape = SubResource( 6 )
 
 [node name="Wall4" type="StaticBody" parent="."]
-transform = Transform( -4.37114e-08, 0, 10, 0, 5, 0, -1, 0, -4.37114e-07, -12.9164, 6.02236, 24.0026 )
+transform = Transform( -4.37114e-08, 0, 10, 0, 10, 0, -1, 0, -4.37114e-07, -12.9164, 6.02236, 24.0026 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Wall4"]
 mesh = SubResource( 5 )
@@ -165,7 +165,7 @@ mesh = SubResource( 5 )
 shape = SubResource( 6 )
 
 [node name="Door1" type="StaticBody" parent="."]
-transform = Transform( 0.769444, 0, 2.49099, 0, 5, 0, -0.638714, 0, 3.00083, 1.71736, 6.02236, 20.6727 )
+transform = Transform( 0.769444, 0, 2.49099, 0, 10, 0, -0.638714, 0, 3.00083, 1.71736, 6.02236, 20.6727 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Door1"]
 mesh = SubResource( 5 )
@@ -174,7 +174,7 @@ mesh = SubResource( 5 )
 shape = SubResource( 6 )
 
 [node name="Door2" type="StaticBody" parent="."]
-transform = Transform( 0.769444, 0, 2.49099, 0, 5, 0, -0.638714, 0, 3.00083, 23.3387, 6.02236, -0.565301 )
+transform = Transform( 0.769444, 0, 2.49099, 0, 10, 0, -0.638714, 0, 3.00083, 23.3387, 6.02236, -0.565301 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Door2"]
 mesh = SubResource( 5 )
@@ -183,7 +183,7 @@ mesh = SubResource( 5 )
 shape = SubResource( 6 )
 
 [node name="Door3" type="StaticBody" parent="."]
-transform = Transform( 0.378374, 0, 3.61005, 0, 5, 0, -0.925653, 0, 1.47565, -21.1917, 5.78602, -3.70835 )
+transform = Transform( 0.378374, 0, 3.61005, 0, 10, 0, -0.925653, 0, 1.47566, -21.1917, 5.78602, -3.70835 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Door3"]
 transform = Transform( 0.930149, 0, 1.43201, 0, 1, 0, -0.0941495, 0, 0.930148, 0, 0, 0 )
@@ -193,7 +193,7 @@ mesh = SubResource( 5 )
 shape = SubResource( 6 )
 
 [node name="Door4" type="StaticBody" parent="."]
-transform = Transform( -4.37114e-08, 0, 3.9, 0, 5, 0, -1, 0, -1.70474e-07, 0.976894, 5.98034, -23.9843 )
+transform = Transform( -4.37114e-08, 0, 3.9, 0, 10, 0, -1, 0, -1.70474e-07, 0.976894, 5.98034, -23.9843 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Door4"]
 mesh = SubResource( 5 )
@@ -202,7 +202,7 @@ mesh = SubResource( 5 )
 shape = SubResource( 6 )
 
 [node name="Wall16" type="StaticBody" parent="."]
-transform = Transform( -4.37114e-08, 0, 10, 0, 5, 0, -1, 0, -4.37114e-07, -12.9164, 6.02236, -23.9575 )
+transform = Transform( -4.37114e-08, 0, 10, 0, 10, 0, -1, 0, -4.37114e-07, -12.9164, 6.02236, -23.9575 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Wall16"]
 mesh = SubResource( 5 )
@@ -211,7 +211,7 @@ mesh = SubResource( 5 )
 shape = SubResource( 6 )
 
 [node name="Wall17" type="StaticBody" parent="."]
-transform = Transform( -4.37114e-08, 0, 10, 0, 5, 0, -1, 0, -4.37114e-07, 14.8676, 6.02236, -23.9575 )
+transform = Transform( -4.37114e-08, 0, 10, 0, 10, 0, -1, 0, -4.37114e-07, 14.8676, 6.02236, -23.9575 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Wall17"]
 mesh = SubResource( 5 )
@@ -220,7 +220,7 @@ mesh = SubResource( 5 )
 shape = SubResource( 6 )
 
 [node name="Wall5" type="StaticBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 5, 0, 0, 0, 11, -23.947, 6.02236, 13.9811 )
+transform = Transform( 1, 0, 0, 0, 10, 0, 0, 0, 11, -23.947, 6.02236, 13.9811 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Wall5"]
 mesh = SubResource( 5 )
@@ -229,7 +229,7 @@ mesh = SubResource( 5 )
 shape = SubResource( 6 )
 
 [node name="Wall7" type="StaticBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 5, 0, 0, 0, 25, -23.9665, 6.02236, 49.9691 )
+transform = Transform( 1, 0, 0, 0, 10, 0, 0, 0, 25, -23.9665, 6.02236, 49.9691 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Wall7"]
 mesh = SubResource( 5 )
@@ -238,7 +238,7 @@ mesh = SubResource( 5 )
 shape = SubResource( 6 )
 
 [node name="Wall8" type="StaticBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 5, 0, 0, 0, 25, 23.995, 6.02236, 49.9691 )
+transform = Transform( 1, 0, 0, 0, 10, 0, 0, 0, 25, 23.995, 6.02236, 49.9691 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Wall8"]
 mesh = SubResource( 5 )
@@ -247,7 +247,7 @@ mesh = SubResource( 5 )
 shape = SubResource( 6 )
 
 [node name="Wall14" type="StaticBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 5, 0, 0, 0, 25, 74.1413, 6.02236, 0.0612965 )
+transform = Transform( 1, 0, 0, 0, 10, 0, 0, 0, 25, 74.1413, 6.02236, 0.0612965 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Wall14"]
 mesh = SubResource( 5 )
@@ -256,7 +256,7 @@ mesh = SubResource( 5 )
 shape = SubResource( 6 )
 
 [node name="Wall15" type="StaticBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 5, 0, 0, 0, 25, -73.9711, 6.02236, 0.0612965 )
+transform = Transform( 1, 0, 0, 0, 10, 0, 0, 0, 25, -73.9711, 6.02236, 0.0612965 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Wall15"]
 mesh = SubResource( 5 )
@@ -265,7 +265,7 @@ mesh = SubResource( 5 )
 shape = SubResource( 6 )
 
 [node name="Wall9" type="StaticBody" parent="."]
-transform = Transform( -4.37114e-08, 0, 25, 0, 5, 0, -1, 0, -1.09278e-06, -0.100571, 6.02236, 73.9628 )
+transform = Transform( -4.37114e-08, 0, 25, 0, 10, 0, -1, 0, -1.09278e-06, -0.100571, 6.02236, 73.9628 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Wall9"]
 mesh = SubResource( 5 )
@@ -274,7 +274,7 @@ mesh = SubResource( 5 )
 shape = SubResource( 6 )
 
 [node name="Wall10" type="StaticBody" parent="."]
-transform = Transform( -4.37114e-08, 0, 25, 0, 5, 0, -1, 0, -1.09278e-06, -49.8983, 6.02236, 23.9605 )
+transform = Transform( -4.37114e-08, 0, 25, 0, 10, 0, -1, 0, -1.09278e-06, -49.8983, 6.02236, 23.9605 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Wall10"]
 mesh = SubResource( 5 )
@@ -283,7 +283,7 @@ mesh = SubResource( 5 )
 shape = SubResource( 6 )
 
 [node name="Wall11" type="StaticBody" parent="."]
-transform = Transform( -4.37114e-08, 0, 25, 0, 5, 0, -1, 0, -1.09278e-06, -49.8983, 6.02236, -23.9895 )
+transform = Transform( -4.37114e-08, 0, 25, 0, 10, 0, -1, 0, -1.09278e-06, -49.8983, 6.02236, -23.9895 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Wall11"]
 mesh = SubResource( 5 )
@@ -292,7 +292,7 @@ mesh = SubResource( 5 )
 shape = SubResource( 6 )
 
 [node name="Wall12" type="StaticBody" parent="."]
-transform = Transform( -4.37114e-08, 0, 25, 0, 5, 0, -1, 0, -1.09278e-06, 49.9217, 6.02236, -23.9895 )
+transform = Transform( -4.37114e-08, 0, 25, 0, 10, 0, -1, 0, -1.09278e-06, 49.9217, 6.02236, -23.9895 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Wall12"]
 mesh = SubResource( 5 )
@@ -301,7 +301,7 @@ mesh = SubResource( 5 )
 shape = SubResource( 6 )
 
 [node name="Wall13" type="StaticBody" parent="."]
-transform = Transform( -4.37114e-08, 0, 25, 0, 5, 0, -1, 0, -1.09278e-06, 49.9217, 6.02236, 24.0303 )
+transform = Transform( -4.37114e-08, 0, 25, 0, 10, 0, -1, 0, -1.09278e-06, 49.9217, 6.02236, 24.0303 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Wall13"]
 mesh = SubResource( 5 )
@@ -310,7 +310,7 @@ mesh = SubResource( 5 )
 shape = SubResource( 6 )
 
 [node name="Wall6" type="StaticBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 5, 0, 0, 0, 11, -23.947, 6.02236, -13.9445 )
+transform = Transform( 1, 0, 0, 0, 10, 0, 0, 0, 11, -23.947, 6.02236, -13.9445 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Wall6"]
 mesh = SubResource( 5 )
@@ -319,7 +319,7 @@ mesh = SubResource( 5 )
 shape = SubResource( 6 )
 
 [node name="Wall2" type="StaticBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 5, 0, 0, 0, 11, 26.0032, 6.02236, -13.9919 )
+transform = Transform( 1, 0, 0, 0, 10, 0, 0, 0, 11, 26.0032, 6.02236, -13.9919 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Wall2"]
 mesh = SubResource( 5 )
@@ -438,3 +438,6 @@ transform = Transform( 0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -45.7136, 0.852444, -15.
 
 [node name="setup" parent="." instance=ExtResource( 38 )]
 transform = Transform( -4.37114e-07, 0, 10, 0, 10, 0, -10, 0, -4.37114e-07, -21.036, 0.137874, 31.2395 )
+
+[node name="rug" parent="." instance=ExtResource( 39 )]
+transform = Transform( 0.0657008, 0, 0.188901, 0, 0.2, 0, -0.188901, 0, 0.0657008, -0.144847, 1.03556, 42.3424 )
