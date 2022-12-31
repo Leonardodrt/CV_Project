@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scripts/Player.gd" type="Script" id=1]
+[ext_resource path="res://scripts/RayCast.gd" type="Script" id=2]
 
 [sub_resource type="CapsuleMesh" id=1]
 
@@ -32,3 +33,20 @@ transform = Transform( 1, 0, -1.67038e-22, 0, 1, 0, -1.67038e-22, 0, 1, -1.83463
 
 [node name="Camera" type="Camera" parent="KinematicBody/Neck"]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, -1.67038e-22, 1, -4.37114e-08, -3.23863e-07, -1.61932e-07, 3.70456 )
+
+[node name="RayCast" type="RayCast" parent="KinematicBody/Neck"]
+transform = Transform( 1, 0, -1.67038e-22, 0, 1, 0, -1.67038e-22, 0, 1, 7.57564e-08, 3.78782e-08, -0.866552 )
+enabled = true
+cast_to = Vector3( 0, 13, 0 )
+collide_with_areas = true
+script = ExtResource( 2 )
+
+[node name="Prompt" type="Label" parent="KinematicBody/Neck/RayCast"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = -7.0
+margin_bottom = 7.0
+text = "Open "
+align = 1
+valign = 1
