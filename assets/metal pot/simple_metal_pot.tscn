@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/metal pot/simple_metal_pot.glb" type="PackedScene" id=1]
+[ext_resource path="res://scripts/simple_metal_pot.gd" type="Script" id=2]
+
+[node name="simple_metal_pot" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="AnimationPlayer" parent="." index="1"]
+autoplay = "Armature|Jump"

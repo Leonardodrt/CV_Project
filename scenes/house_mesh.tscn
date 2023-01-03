@@ -1,4 +1,4 @@
-[gd_scene load_steps=100 format=2]
+[gd_scene load_steps=106 format=2]
 
 [ext_resource path="res://scenes/character.tscn" type="PackedScene" id=1]
 [ext_resource path="res://textures/floor1/1K-Square Pattern Parquet_10_baseColor.jpg" type="Texture" id=2]
@@ -56,6 +56,12 @@
 [ext_resource path="res://textures/walls/Wallpaper_001_NRM.jpg" type="Texture" id=54]
 [ext_resource path="res://assets/35jqgg1m7iow-143248/Door1.fbx" type="PackedScene" id=55]
 [ext_resource path="res://scripts/body_detected.gd" type="Script" id=56]
+[ext_resource path="res://assets/dining room/modern_dining_room.tscn" type="PackedScene" id=57]
+[ext_resource path="res://assets/kitchen counter/small_kitchen_with_oven.tscn" type="PackedScene" id=58]
+[ext_resource path="res://assets/fridge/old_fridge.tscn" type="PackedScene" id=59]
+[ext_resource path="res://assets/metal pot/simple_metal_pot.tscn" type="PackedScene" id=60]
+[ext_resource path="res://assets/bread/bread.tscn" type="PackedScene" id=61]
+[ext_resource path="res://assets/wine/wine_bottle_holder.tscn" type="PackedScene" id=62]
 
 [sub_resource type="BoxShape" id=3]
 
@@ -459,6 +465,7 @@ shape = SubResource( 6 )
 transform = Transform( -4.37114e-08, 0, 25, 0, 10, 0, -1, 0, -1.09278e-06, 49.9217, 6.02236, -23.9895 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Wall12"]
+transform = Transform( 1, 0, -1.42109e-14, 0, 1, 0, 0, 0, 0.2, -9.53674e-07, 0, 0.865562 )
 mesh = SubResource( 5 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Wall12"]
@@ -633,7 +640,7 @@ transform = Transform( 0.102259, -1.96009e-06, -4.86872e-05, -2.52171e-06, 0.244
 shape = SubResource( 44 )
 
 [node name="Door7pivot" type="Spatial" parent="."]
-transform = Transform( -0.00591662, -0.00143074, 0.999982, 0.0118854, 0.999928, 0.00150098, -0.999912, 0.0118941, -0.00589919, 26.1455, 7.86939, -3.67907 )
+transform = Transform( -0.00591662, -0.00143073, 0.999982, 0.0118854, 0.999927, 0.00150098, -0.999912, 0.011894, -0.0058992, 26.1455, 7.86939, -3.67907 )
 
 [node name="Door7" parent="Door7pivot" instance=ExtResource( 55 )]
 transform = Transform( 40, 0, -1.19209e-07, 0, 30.4747, 0, 1.19209e-07, 0, 40, -5.16026, -6.88718, -0.715254 )
@@ -671,3 +678,31 @@ anims/rotat = SubResource( 49 )
 [node name="CollisionShape" type="CollisionShape" parent="Door8pivot/Door8/door"]
 transform = Transform( 0.102259, -1.96009e-06, -4.86872e-05, -2.52171e-06, 0.244707, 1.31578e-06, -4.86372e-05, 9.96087e-08, 0.000500274, 0, 0, 0 )
 shape = SubResource( 44 )
+
+[node name="modern_dining_room" parent="." instance=ExtResource( 57 )]
+transform = Transform( 7, 0, 0, 0, 7, 0, 0, 0, 7, 49.2377, 11.4351, 0.237789 )
+
+[node name="Wall18" type="StaticBody" parent="."]
+transform = Transform( -4.37114e-08, 0, 25, 0, 10, 0, -1, 0, -1.09278e-06, 6.33723, 6.02236, -23.9895 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Wall18"]
+transform = Transform( 1, 0, -1.42109e-14, 0, 1, 0, 0, 0, 0.2, -9.53674e-07, 0, 0.865562 )
+mesh = SubResource( 5 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Wall18"]
+shape = SubResource( 6 )
+
+[node name="small_kitchen_with_oven" parent="." instance=ExtResource( 58 )]
+transform = Transform( -8, 0, -1.50996e-06, 0, 6, 0, 1.20797e-06, 0, -10, 59.8051, 0.96314, 20.274 )
+
+[node name="old_fridge" parent="." instance=ExtResource( 59 )]
+transform = Transform( -10, 0, -1.50996e-06, 0, 10, 0, 1.50996e-06, 0, -10, 69.3367, 0.950262, 20.2811 )
+
+[node name="simple_metal_pot" parent="." instance=ExtResource( 60 )]
+transform = Transform( 15, 0, 0, 0, 15, 0, 0, 0, 15, 57.1743, 6.45225, 18.7831 )
+
+[node name="bread" parent="." instance=ExtResource( 61 )]
+transform = Transform( -0.0408572, 0, -0.0288216, 0, 0.05, 0, 0.0288216, 0, -0.0408572, 53.7951, 5.0901, -0.503786 )
+
+[node name="wine_bottle_holder" parent="." instance=ExtResource( 62 )]
+transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 49.2508, 4.86118, -3.64221 )
