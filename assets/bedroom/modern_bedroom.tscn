@@ -25,6 +25,9 @@ visible = false
 [node name="Modern Bedroom_Trim_0" parent="Sketchfab_model/Modern Bedroomfbx/RootNode/Modern Bedroom" index="3"]
 visible = false
 
+[node name="Modern Bedroom_Fireplace_0" parent="Sketchfab_model/Modern Bedroomfbx/RootNode/Modern Bedroom" index="4"]
+use_in_baked_light = true
+
 [node name="Modern Bedroom_Carpet_0" parent="Sketchfab_model/Modern Bedroomfbx/RootNode/Modern Bedroom" index="6"]
 visible = false
 
@@ -33,7 +36,17 @@ visible = false
 
 [node name="Modern Bedroom_Material_0" parent="Sketchfab_model/Modern Bedroomfbx/RootNode/Modern Bedroom" index="8"]
 transform = Transform( 0.7, -5.53154e-19, 5.01974e-28, 9.39168e-23, 0.7, 4.44089e-16, -1.77636e-15, 2.50111e-12, 0.7, 0, -0.280136, -0.586584 )
+use_in_baked_light = true
 material/0 = SubResource( 1 )
+
+[node name="Modern Bedroom_Drawer_0" parent="Sketchfab_model/Modern Bedroomfbx/RootNode/Modern Bedroom" index="9"]
+use_in_baked_light = true
+
+[node name="Modern Bedroom_Sofa_0" parent="Sketchfab_model/Modern Bedroomfbx/RootNode/Modern Bedroom" index="10"]
+use_in_baked_light = true
+
+[node name="Modern Bedroom_SofaPillows_0" parent="Sketchfab_model/Modern Bedroomfbx/RootNode/Modern Bedroom" index="11"]
+use_in_baked_light = true
 
 [node name="Modern Bedroom_Trim001_0" parent="Sketchfab_model/Modern Bedroomfbx/RootNode/Modern Bedroom" index="13"]
 transform = Transform( 1, -2.55863e-19, -5.68434e-14, -1.34224e-23, 1, 0, -3.55271e-15, 6.82121e-13, 1, 0, -3.21202e-08, -4.17605 )

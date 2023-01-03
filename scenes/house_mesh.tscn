@@ -546,9 +546,11 @@ mesh = ExtResource( 11 )
 transform = Transform( 0.125, 0, 0, 0, -5.46393e-09, 0.125, 0, -0.125, -5.46393e-09, 0.0741458, 0.278142, -0.0146527 )
 light_energy = 7.165
 
-[node name="DirectionalLight2" type="DirectionalLight" parent="desklamp_obj"]
-transform = Transform( 0.0910057, -0.0750646, -0.0413314, -0.0537502, -0.0969604, 0.057746, -0.0667375, -0.0242691, -0.10287, -4.31476, 0.876466, -12.9857 )
-light_energy = 0.559
+[node name="OmniLight" type="OmniLight" parent="desklamp_obj"]
+transform = Transform( 0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, 0.030901, 0.311315, 0.030901 )
+light_energy = 2.321
+shadow_enabled = true
+omni_range = 18.382
 
 [node name="bed_obj_smaller" type="MeshInstance" parent="."]
 transform = Transform( -3.49691e-07, 0, 8, 0, 8, 0, -8, 0, -3.49691e-07, 0.940861, 1.13435, 63.613 )
@@ -686,6 +688,24 @@ shape = SubResource( 44 )
 [node name="modern_dining_room" parent="." instance=ExtResource( 57 )]
 transform = Transform( 7, 0, 0, 0, 7, 0, 0, 0, 7, 49.2377, 11.4351, 0.237789 )
 
+[node name="SpotLight" type="SpotLight" parent="modern_dining_room"]
+transform = Transform( 0.142857, 0, 0, 0, 1.70355e-09, 0.142857, 0, -0.142857, 1.70355e-09, -0.007339, -0.467721, -0.170167 )
+light_energy = 2.597
+light_indirect_energy = 1.44
+shadow_enabled = true
+
+[node name="SpotLight2" type="SpotLight" parent="modern_dining_room"]
+transform = Transform( 0.142857, 0, 0, 0, 1.70355e-09, 0.142857, 0, -0.142857, 1.70355e-09, 0.492686, -0.467721, -0.170167 )
+light_energy = 2.597
+light_indirect_energy = 1.44
+shadow_enabled = true
+
+[node name="SpotLight3" type="SpotLight" parent="modern_dining_room"]
+transform = Transform( 0.142857, 0, 0, 0, 1.70355e-09, 0.142857, 0, -0.142857, 1.70355e-09, -0.500913, -0.467721, -0.183979 )
+light_energy = 2.597
+light_indirect_energy = 1.44
+shadow_enabled = true
+
 [node name="Wall18" type="StaticBody" parent="."]
 transform = Transform( -4.37114e-08, 0, 25, 0, 10, 0, -1, 0, -1.09278e-06, 6.33723, 6.02236, -23.9895 )
 
@@ -722,3 +742,10 @@ transform = Transform( 0.005, 0, 0, 0, 0.005, 0, 0, 0, 0.005, 41.4343, 8.42246, 
 
 [node name="modern_bedroom" parent="." instance=ExtResource( 66 )]
 transform = Transform( -2.84124e-07, 0, 6.5, 0, 6.5, 0, -6.5, 0, -2.84124e-07, 0.153669, -2.0566, 75.4799 )
+
+[node name="THE SUN" type="DirectionalLight" parent="."]
+transform = Transform( 0.137282, -0.561916, -0.815723, -0.430001, -0.775683, 0.461967, -0.89233, 0.287342, -0.348112, 6.83874, 12.5083, -47.0077 )
+light_energy = 1.587
+light_indirect_energy = 1.147
+shadow_enabled = true
+shadow_bias = 1.491
