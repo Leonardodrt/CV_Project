@@ -1,4 +1,4 @@
-[gd_scene load_steps=110 format=2]
+[gd_scene load_steps=113 format=2]
 
 [ext_resource path="res://scenes/character.tscn" type="PackedScene" id=1]
 [ext_resource path="res://textures/floor1/1K-Square Pattern Parquet_10_baseColor.jpg" type="Texture" id=2]
@@ -66,6 +66,7 @@
 [ext_resource path="res://assets/microwave/microwave.tscn" type="PackedScene" id=64]
 [ext_resource path="res://assets/dishes/dishes.tscn" type="PackedScene" id=65]
 [ext_resource path="res://assets/bedroom/modern_bedroom.tscn" type="PackedScene" id=66]
+[ext_resource path="res://scripts/SpotLightMiddleKitchen.gd" type="Script" id=67]
 
 [sub_resource type="BoxShape" id=3]
 
@@ -314,6 +315,38 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector3( -0.086, 0, 0.681 ), Vector3( -0.086, -90, 0.681 ), Vector3( -0.086, -90, 0.681 ), Vector3( -0.086, 0, 0.681 ) ]
+}
+
+[sub_resource type="Animation" id=50]
+resource_name = "Blink"
+loop = true
+step = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:light_energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 0.625, 0.75 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 2.597, 2.597, 0.0, 0.0 ]
+}
+
+[sub_resource type="Animation" id=51]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:light_energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 2.597 ]
 }
 
 [node name="House" type="Spatial"]
@@ -693,6 +726,12 @@ transform = Transform( 0.142857, 0, 0, 0, 1.70355e-09, 0.142857, 0, -0.142857, 1
 light_energy = 2.597
 light_indirect_energy = 1.44
 shadow_enabled = true
+script = ExtResource( 67 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="modern_dining_room/SpotLight"]
+autoplay = "Blink"
+anims/Blink = SubResource( 50 )
+anims/RESET = SubResource( 51 )
 
 [node name="SpotLight2" type="SpotLight" parent="modern_dining_room"]
 transform = Transform( 0.142857, 0, 0, 0, 1.70355e-09, 0.142857, 0, -0.142857, 1.70355e-09, 0.492686, -0.467721, -0.170167 )
