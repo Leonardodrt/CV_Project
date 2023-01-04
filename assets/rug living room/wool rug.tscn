@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/rug living room/henrik_wool_rug_160x230cm_mustard_and_grey.glb" type="PackedScene" id=1]
+
+[node name="henrik_wool_rug_160x230cm_mustard_and_grey" instance=ExtResource( 1 )]

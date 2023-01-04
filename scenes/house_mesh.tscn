@@ -1,4 +1,4 @@
-[gd_scene load_steps=113 format=2]
+[gd_scene load_steps=116 format=2]
 
 [ext_resource path="res://scenes/character.tscn" type="PackedScene" id=1]
 [ext_resource path="res://textures/floor1/1K-Square Pattern Parquet_10_baseColor.jpg" type="Texture" id=2]
@@ -67,6 +67,9 @@
 [ext_resource path="res://assets/dishes/dishes.tscn" type="PackedScene" id=65]
 [ext_resource path="res://assets/bedroom/modern_bedroom.tscn" type="PackedScene" id=66]
 [ext_resource path="res://scripts/SpotLightMiddleKitchen.gd" type="Script" id=67]
+[ext_resource path="res://assets/painting/painting_by_zdzislaw_beksinski_4.glb" type="PackedScene" id=68]
+[ext_resource path="res://assets/painting/painting_lowpoly.tscn" type="PackedScene" id=69]
+[ext_resource path="res://assets/rug living room/wool rug.tscn" type="PackedScene" id=70]
 
 [sub_resource type="BoxShape" id=3]
 
@@ -362,6 +365,7 @@ mesh = SubResource( 4 )
 
 [node name="ceiling" type="StaticBody" parent="."]
 transform = Transform( 3, 0, 0, 0, 1, 0, 0, 0, 2, 0, 15.3786, 25.0011 )
+visible = false
 
 [node name="CollisionShape" type="CollisionShape" parent="ceiling"]
 shape = SubResource( 3 )
@@ -633,7 +637,7 @@ mesh = ExtResource( 32 )
 material/0 = SubResource( 18 )
 
 [node name="glass_table_obj" type="MeshInstance" parent="."]
-transform = Transform( -1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -47.0748, 0.840002, 8.50863 )
+transform = Transform( -1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -48.1657, 0.840002, 8.50863 )
 mesh = ExtResource( 36 )
 material/0 = ExtResource( 35 )
 material/1 = ExtResource( 33 )
@@ -642,7 +646,7 @@ material/3 = ExtResource( 34 )
 material/4 = ExtResource( 33 )
 
 [node name="tvcabinet" parent="." instance=ExtResource( 37 )]
-transform = Transform( 0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -45.7136, 0.852444, -15.0386 )
+transform = Transform( 0.638839, 0, 0, 0, 0.623119, 0, 0, 0, 0.4, -48.8612, 0.852444, -15.0386 )
 
 [node name="setup" parent="." instance=ExtResource( 38 )]
 transform = Transform( 1.19249e-07, 0, -10, 0, 10, 0, 10, 0, 1.19249e-07, 20.7048, 0.137874, 31.4699 )
@@ -788,3 +792,15 @@ light_energy = 1.587
 light_indirect_energy = 1.147
 shadow_enabled = true
 shadow_bias = 1.491
+
+[node name="henrik_wool_rug_160x230cm_mustard_and_grey" parent="." instance=ExtResource( 70 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -47.3073, 0.89854, -0.534294 )
+
+[node name="painting_by_zdzislaw_beksinski_4" parent="." instance=ExtResource( 68 )]
+transform = Transform( -4.37114e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.37114e-09, -72.877, 9.25613, -0.987259 )
+
+[node name="painting_lowpoly" parent="." instance=ExtResource( 69 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, -31.9577, 9.34701, 22.7053 )
+
+[node name="painting_lowpoly2" parent="." instance=ExtResource( 69 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, -64.4051, 9.34701, 22.7053 )
