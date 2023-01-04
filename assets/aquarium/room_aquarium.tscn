@@ -1,10 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=2 format=2]
 
 [ext_resource path="res://assets/aquarium/room_aquarium.glb" type="PackedScene" id=1]
-[ext_resource path="res://room_aquarium.gd" type="Script" id=2]
 
 [node name="room_aquarium" instance=ExtResource( 1 )]
-script = ExtResource( 2 )
 
 [node name="������������_����������_0" parent="Sketchfab_model/aquariumfbx/Object_2/RootNode/������������_��������_1" index="0"]
 transform = Transform( -0.87274, -0.404958, -0.48032, 0.560946, -0.132065, -0.907894, 0.282909, -0.987391, 0.318426, -68.3645, -22.0481, 6.65509 )
