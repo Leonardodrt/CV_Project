@@ -1,4 +1,4 @@
-[gd_scene load_steps=116 format=2]
+[gd_scene load_steps=120 format=2]
 
 [ext_resource path="res://scenes/character.tscn" type="PackedScene" id=1]
 [ext_resource path="res://textures/floor1/1K-Square Pattern Parquet_10_baseColor.jpg" type="Texture" id=2]
@@ -70,6 +70,10 @@
 [ext_resource path="res://assets/painting/painting_by_zdzislaw_beksinski_4.glb" type="PackedScene" id=68]
 [ext_resource path="res://assets/painting/painting_lowpoly.tscn" type="PackedScene" id=69]
 [ext_resource path="res://assets/rug living room/wool rug.tscn" type="PackedScene" id=70]
+[ext_resource path="res://assets/window/3d_architecture__window.glb" type="PackedScene" id=71]
+[ext_resource path="res://assets/final fantasy/google_blocks_-_final_fantasy_-_low_poly.tscn" type="PackedScene" id=72]
+[ext_resource path="res://assets/sephiroth/sephiroth_low-poly_model.tscn" type="PackedScene" id=73]
+[ext_resource path="res://assets/sephiroth/sephirothmobius_final_fantasy.tscn" type="PackedScene" id=74]
 
 [sub_resource type="BoxShape" id=3]
 
@@ -497,6 +501,7 @@ shape = SubResource( 6 )
 transform = Transform( -4.37114e-08, 0, 25, 0, 10, 0, -1, 0, -1.09278e-06, -49.8983, 6.02236, -23.9895 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Wall11"]
+transform = Transform( 1, 0, 5.64645e-07, 0, 1, 0, 9.03436e-10, 0, 0.483295, 0, 0, 0.0220888 )
 mesh = SubResource( 35 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Wall11"]
@@ -804,3 +809,18 @@ transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, -31.9577, 9.34701, 22.7053 )
 
 [node name="painting_lowpoly2" parent="." instance=ExtResource( 69 )]
 transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, -64.4051, 9.34701, 22.7053 )
+
+[node name="3d_architecture__window" parent="." instance=ExtResource( 71 )]
+transform = Transform( 8.07512, 0, 0, 0, 5.68828, 0, 0, 0, 5, -46.6903, 9.12399, 9.01152 )
+
+[node name="3d_architecture__window2" parent="." instance=ExtResource( 71 )]
+transform = Transform( 8.48286, 0, 0, 0, 5.68828, 0, 0, 0, 5, -81.9254, 9.02144, 9.01152 )
+
+[node name="google_blocks_-_final_fantasy_-_low_poly" parent="." instance=ExtResource( 72 )]
+transform = Transform( 5.96244e-08, 0, -5, 0, 5, 0, 5, 0, 5.96244e-08, -71.6149, 6.28861, -10.2619 )
+
+[node name="sephiroth_low-poly_model" parent="." instance=ExtResource( 73 )]
+transform = Transform( -1.31134e-10, 0, 0.003, 0, 0.003, 0, -0.003, 0, -1.31134e-10, -71.2532, 7.48872, -9.27491 )
+
+[node name="sephirothmobius_final_fantasy" parent="." instance=ExtResource( 74 )]
+transform = Transform( -3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, -71.5592, 7.50197, -11.6073 )
