@@ -1,4 +1,6 @@
+
 extends Spatial
+
 
 
 # Declare member variables here. Examples:
@@ -14,6 +16,6 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
-	var animation_player = get_node("AnimationPlayer")
-	animation_player.play("Open-Close")
-	animation_player.connect("animation_finished", animation_player, "play")
+	#var animation_player = get_node("AnimationPlayer")
+	#animation_player.play("Open-Close")
+	#animation_player.connect("animation_finished", animation_player, "play")
