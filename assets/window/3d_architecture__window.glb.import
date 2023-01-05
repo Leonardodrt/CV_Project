@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/3d_architecture__window.glb-8275e8d97a78e0eb99b5196372f85c3e.scn"
+path="res://.import/3d_architecture__window.glb-40c25f1a9352a26136e37ef5234234f7.scn"
 
 [deps]
 
-source_file="res://assets/window/3d_architecture__window.glb"
-dest_files=[ "res://.import/3d_architecture__window.glb-8275e8d97a78e0eb99b5196372f85c3e.scn" ]
+source_file="res://assets/Window/3d_architecture__window.glb"
+dest_files=[ "res://.import/3d_architecture__window.glb-40c25f1a9352a26136e37ef5234234f7.scn" ]
 
 [params]
 

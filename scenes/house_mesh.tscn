@@ -1668,7 +1668,6 @@ mesh = SubResource( 4 )
 
 [node name="ceiling" type="StaticBody" parent="."]
 transform = Transform( 3, 0, 0, 0, 1, 0, 0, 0, 2, 0, 15.3786, 25.0011 )
-visible = false
 
 [node name="CollisionShape" type="CollisionShape" parent="ceiling"]
 shape = SubResource( 3 )
@@ -2153,7 +2152,6 @@ root_node = NodePath("../..")
 anims/animate = SubResource( 63 )
 
 [node name="CollisionShape" type="CollisionShape" parent="wine_bottle_holder/Bottles"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 shape = SubResource( 64 )
 
 [node name="granite_counter_with_3_doors" parent="." instance=ExtResource( 63 )]
