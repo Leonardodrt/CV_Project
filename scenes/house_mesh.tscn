@@ -1,4 +1,4 @@
-[gd_scene load_steps=138 format=2]
+[gd_scene load_steps=151 format=2]
 
 [ext_resource path="res://scenes/character.tscn" type="PackedScene" id=1]
 [ext_resource path="res://textures/floor1/1K-Square Pattern Parquet_10_baseColor.jpg" type="Texture" id=2]
@@ -23,7 +23,7 @@
 [ext_resource path="res://assets/bed/textures/cover_top_Base_color.png" type="Texture" id=21]
 [ext_resource path="res://assets/bed/textures/cover_top_Normal_OpenGL.png" type="Texture" id=22]
 [ext_resource path="res://assets/couch/source/couch_obj.obj" type="ArrayMesh" id=23]
-[ext_resource path="res://assets/couch/source/Couch.material" type="Material" id=24]
+[ext_resource path="res://scenes/greenglass.material" type="Material" id=24]
 [ext_resource path="res://assets/couch/source/blanket.material" type="Material" id=25]
 [ext_resource path="res://assets/oriental shelf/source/Shelf/lambert1.material" type="Material" id=26]
 [ext_resource path="res://assets/oriental shelf/source/Shelf/shelf_obj.obj" type="ArrayMesh" id=27]
@@ -32,7 +32,6 @@
 [ext_resource path="res://assets/ducks/duck 2.obj" type="ArrayMesh" id=30]
 [ext_resource path="res://assets/ducks/duck 3.obj" type="ArrayMesh" id=31]
 [ext_resource path="res://assets/ducks/duck 4.obj" type="ArrayMesh" id=32]
-[ext_resource path="res://assets/glass table/source/Glass.material" type="Material" id=33]
 [ext_resource path="res://assets/glass table/source/Legs.material" type="Material" id=34]
 [ext_resource path="res://assets/glass table/source/Pillars.material" type="Material" id=35]
 [ext_resource path="res://assets/glass table/source/glass_table_obj.obj" type="ArrayMesh" id=36]
@@ -237,6 +236,111 @@ normal_enabled = true
 normal_scale = 1.0
 normal_texture = ExtResource( 19 )
 
+[sub_resource type="VisualShaderNodeColorConstant" id=69]
+constant = Color( 0.231373, 0.219608, 0.658824, 0.156863 )
+
+[sub_resource type="VisualShaderNodeInput" id=70]
+input_name = "color"
+
+[sub_resource type="VisualShaderNodeInput" id=71]
+input_name = "vertex"
+
+[sub_resource type="VisualShader" id=72]
+code = "shader_type spatial;
+render_mode specular_schlick_ggx, async_visible;
+
+
+
+
+void vertex() {
+// Input:2
+	vec3 n_out2p0 = VERTEX;
+
+// Output:0
+	COLOR.rgb = n_out2p0;
+
+}
+
+void fragment() {
+// Input:3
+	vec3 n_out3p0 = COLOR.rgb;
+
+// Color:2
+	vec3 n_out2p0 = vec3(0.231373, 0.219608, 0.658824);
+	float n_out2p1 = 0.156863;
+
+// Output:0
+	ALBEDO = n_out3p0;
+	ALPHA = n_out2p1;
+
+}
+
+void light() {
+// Output:0
+
+}
+"
+graph_offset = Vector2( -317.457, 23.6238 )
+nodes/vertex/0/position = Vector2( 440, 140 )
+nodes/vertex/2/node = SubResource( 71 )
+nodes/vertex/2/position = Vector2( 120, 180 )
+nodes/vertex/connections = PoolIntArray( 2, 0, 0, 6 )
+nodes/fragment/2/node = SubResource( 69 )
+nodes/fragment/2/position = Vector2( 140, 240 )
+nodes/fragment/3/node = SubResource( 70 )
+nodes/fragment/3/position = Vector2( 120, 420 )
+nodes/fragment/connections = PoolIntArray( 3, 0, 0, 0, 2, 1, 0, 1 )
+
+[sub_resource type="ShaderMaterial" id=73]
+shader = SubResource( 72 )
+
+[sub_resource type="VisualShaderNodeInput" id=76]
+input_name = "normal"
+
+[sub_resource type="VisualShaderNodeColorConstant" id=77]
+constant = Color( 1, 0, 0, 1 )
+
+[sub_resource type="VisualShader" id=74]
+code = "shader_type spatial;
+render_mode specular_schlick_ggx, async_visible;
+
+
+
+
+void vertex() {
+// Output:0
+
+}
+
+void fragment() {
+// Color:3
+	vec3 n_out3p0 = vec3(1.000000, 0.000000, 0.000000);
+	float n_out3p1 = 1.000000;
+
+// Input:2
+	vec3 n_out2p0 = NORMAL;
+
+// Output:0
+	ALPHA = n_out3p1;
+	EMISSION = n_out2p0;
+
+}
+
+void light() {
+// Output:0
+
+}
+"
+graph_offset = Vector2( -386.457, 69.6238 )
+nodes/fragment/2/node = SubResource( 76 )
+nodes/fragment/2/position = Vector2( 20, 220 )
+nodes/fragment/3/node = SubResource( 77 )
+nodes/fragment/3/position = Vector2( 60, 100 )
+nodes/fragment/connections = PoolIntArray( 3, 1, 0, 1, 2, 0, 0, 5 )
+
+[sub_resource type="ShaderMaterial" id=75]
+shader = SubResource( 74 )
+
 [sub_resource type="SpatialMaterial" id=16]
 albedo_texture = ExtResource( 28 )
 
@@ -245,6 +349,63 @@ albedo_texture = ExtResource( 28 )
 
 [sub_resource type="SpatialMaterial" id=18]
 albedo_texture = ExtResource( 28 )
+
+[sub_resource type="VisualShaderNodeColorConstant" id=78]
+constant = Color( 0.143327, 0.155709, 0.649907, 1 )
+
+[sub_resource type="VisualShaderNodeInput" id=79]
+input_name = "vertex"
+
+[sub_resource type="VisualShaderNodeInput" id=80]
+input_name = "vertex"
+
+[sub_resource type="VisualShader" id=81]
+code = "shader_type spatial;
+render_mode specular_schlick_ggx, async_visible;
+
+
+
+
+void vertex() {
+// Input:2
+	vec3 n_out2p0 = VERTEX;
+
+// Output:0
+	VERTEX = n_out2p0;
+
+}
+
+void fragment() {
+// Color:2
+	vec3 n_out2p0 = vec3(0.143327, 0.155709, 0.649907);
+	float n_out2p1 = 1.000000;
+
+// Input:3
+	vec3 n_out3p0 = VERTEX;
+
+// Output:0
+	ALBEDO = n_out2p0;
+	ALPHA = dot(n_out3p0, vec3(0.333333, 0.333333, 0.333333));
+
+}
+
+void light() {
+// Output:0
+
+}
+"
+graph_offset = Vector2( -386.457, 69.6238 )
+nodes/vertex/2/node = SubResource( 80 )
+nodes/vertex/2/position = Vector2( 25.5433, 189.624 )
+nodes/vertex/connections = PoolIntArray( 2, 0, 0, 0 )
+nodes/fragment/2/node = SubResource( 78 )
+nodes/fragment/2/position = Vector2( 80, 140 )
+nodes/fragment/3/node = SubResource( 79 )
+nodes/fragment/3/position = Vector2( 40, 260 )
+nodes/fragment/connections = PoolIntArray( 2, 0, 0, 0, 3, 0, 0, 1 )
+
+[sub_resource type="ShaderMaterial" id=82]
+shader = SubResource( 81 )
 
 [sub_resource type="Animation" id=52]
 resource_name = "animate"
@@ -1907,7 +2068,7 @@ material/8 = SubResource( 15 )
 [node name="couch_obj" type="MeshInstance" parent="."]
 transform = Transform( -6, 0, -9.05975e-07, 0, 6, 0, 9.05975e-07, 0, -6, -48.9735, 4.02987, 19.5614 )
 mesh = ExtResource( 23 )
-material/0 = ExtResource( 24 )
+material/0 = SubResource( 73 )
 material/1 = ExtResource( 25 )
 
 [node name="shelf_obj" type="MeshInstance" parent="."]
@@ -1918,7 +2079,12 @@ material/0 = ExtResource( 26 )
 [node name="shelf_obj2" type="MeshInstance" parent="."]
 transform = Transform( 50, 0, 0, 0, 50, 0, 0, 0, 50, -71.6513, 1.08111, -10.8708 )
 mesh = ExtResource( 27 )
-material/0 = ExtResource( 26 )
+material/0 = SubResource( 75 )
+
+[node name="shelf_obj2" type="MeshInstance" parent="shelf_obj2"]
+transform = Transform( 50, 0, 0, 0, 50, 0, 0, 0, 50, -71.6513, 1.08111, -10.8708 )
+mesh = ExtResource( 27 )
+material/0 = SubResource( 75 )
 
 [node name="duck full" type="MeshInstance" parent="."]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -71.9989, 7.61125, 9.90775 )
@@ -1943,10 +2109,10 @@ material/0 = SubResource( 18 )
 transform = Transform( -1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -48.1657, 0.840002, 8.50863 )
 mesh = ExtResource( 36 )
 material/0 = ExtResource( 35 )
-material/1 = ExtResource( 33 )
+material/1 = SubResource( 82 )
 material/2 = ExtResource( 34 )
 material/3 = ExtResource( 34 )
-material/4 = ExtResource( 33 )
+material/4 = ExtResource( 24 )
 
 [node name="tvcabinet" parent="." instance=ExtResource( 37 )]
 transform = Transform( 0.638839, 0, 0, 0, 0.623119, 0, 0, 0, 0.4, -48.8612, 0.852444, -15.0386 )
