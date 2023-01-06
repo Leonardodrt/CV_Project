@@ -1,0 +1,11 @@
+Model Information:
+* title:	Pendulum Wall Clock
+* source:	https://sketchfab.com/3d-models/pendulum-wall-clock-8665bceba4ae44dc9fd40f441bbeb729
+* author:	Álterego (https://sketchfab.com/alter_ego)
+
+Model License:
+* license type:	CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
+* requirements:	Author must be credited. No commercial use.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Pendulum Wall Clock" (https://sketchfab.com/3d-models/pendulum-wall-clock-8665bceba4ae44dc9fd40f441bbeb729) by Álterego (https://sketchfab.com/alter_ego) licensed under CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
