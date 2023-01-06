@@ -1831,7 +1831,6 @@ mesh = SubResource( 4 )
 
 [node name="ceiling" type="StaticBody" parent="."]
 transform = Transform( 3, 0, 0, 0, 1, 0, 0, 0, 2, 0, 15.3786, 25.0011 )
-visible = false
 
 [node name="CollisionShape" type="CollisionShape" parent="ceiling"]
 shape = SubResource( 3 )
@@ -2371,13 +2370,22 @@ shadow_bias = 1.491
 transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -47.3073, 0.89854, -0.534294 )
 
 [node name="painting_by_zdzislaw_beksinski_4" parent="." instance=ExtResource( 68 )]
-transform = Transform( -4.37114e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.37114e-09, -72.877, 9.25613, -0.987259 )
+transform = Transform( -4.37114e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.37114e-09, -72.877, 7.74927, -0.987259 )
+
+[node name="painting_by_zdzislaw_beksinski_5" parent="." instance=ExtResource( 68 )]
+transform = Transform( -4.37114e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.37114e-09, -22.9209, 7.77062, -13.9193 )
 
 [node name="painting_lowpoly" parent="." instance=ExtResource( 69 )]
-transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, -31.9577, 9.34701, 22.7053 )
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, -31.9577, 7.39777, 22.7053 )
+
+[node name="painting_lowpoly3" parent="." instance=ExtResource( 69 )]
+transform = Transform( -5, 0, -4.37114e-07, 0, 5, 0, 4.37114e-07, 0, -5, 14.722, 8.03496, -22.7518 )
+
+[node name="painting_lowpoly4" parent="." instance=ExtResource( 69 )]
+transform = Transform( -5, 0, -4.37114e-07, 0, 5, 0, 4.37114e-07, 0, -5, -12.7505, 7.99249, -22.7518 )
 
 [node name="painting_lowpoly2" parent="." instance=ExtResource( 69 )]
-transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, -64.4051, 9.34701, 22.7053 )
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, -64.4051, 7.30327, 22.7053 )
 
 [node name="3d_architecture__window" parent="." instance=ExtResource( 71 )]
 transform = Transform( 8.07512, 0, 0, 0, 5.68828, 0, 0, 0, 5, -46.6903, 9.12399, 9.01152 )
