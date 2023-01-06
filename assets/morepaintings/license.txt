@@ -1,0 +1,11 @@
+Model Information:
+* title:	Oil Painting of Peaches
+* source:	https://sketchfab.com/3d-models/oil-painting-of-peaches-4597faefaa984c07a4f7e0e32fd3ab02
+* author:	IUPUI University Library (https://sketchfab.com/iupuiul)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Oil Painting of Peaches" (https://sketchfab.com/3d-models/oil-painting-of-peaches-4597faefaa984c07a4f7e0e32fd3ab02) by IUPUI University Library (https://sketchfab.com/iupuiul) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
