@@ -1,4 +1,4 @@
-[gd_scene load_steps=156 format=2]
+[gd_scene load_steps=183 format=2]
 
 [ext_resource path="res://scenes/character.tscn" type="PackedScene" id=1]
 [ext_resource path="res://textures/floor1/1K-Square Pattern Parquet_10_baseColor.jpg" type="Texture" id=2]
@@ -78,9 +78,12 @@
 [ext_resource path="res://assets/football/footballsoccer_ball.glb" type="PackedScene" id=76]
 [ext_resource path="res://assets/football/low_poly_footballsoccer_ball.glb" type="PackedScene" id=77]
 [ext_resource path="res://assets/wallclock/scene.gltf" type="PackedScene" id=78]
-[ext_resource path="res://assets/cartooncar/scene.gltf" type="PackedScene" id=79]
+[ext_resource path="res://phonggreen.tres" type="Shader" id=79]
 [ext_resource path="res://assets/chandelier/scene.gltf" type="PackedScene" id=80]
 [ext_resource path="res://assets/morepaintings/scene.gltf" type="PackedScene" id=81]
+[ext_resource path="res://assets/flatclock/flatclock.gltf" type="PackedScene" id=82]
+[ext_resource path="res://metalblue.tres" type="Shader" id=83]
+[ext_resource path="res://assets/sphere/sphere.obj" type="ArrayMesh" id=84]
 
 [sub_resource type="BoxShape" id=3]
 
@@ -242,7 +245,7 @@ normal_scale = 1.0
 normal_texture = ExtResource( 19 )
 
 [sub_resource type="VisualShaderNodeColorConstant" id=69]
-constant = Color( 0.231373, 0.219608, 0.658824, 0.156863 )
+constant = Color( 0.231373, 0.219608, 0.658824, 0.2 )
 
 [sub_resource type="VisualShaderNodeInput" id=70]
 input_name = "color"
@@ -272,7 +275,7 @@ void fragment() {
 
 // Color:2
 	vec3 n_out2p0 = vec3(0.231373, 0.219608, 0.658824);
-	float n_out2p1 = 0.156863;
+	float n_out2p1 = 0.200000;
 
 // Output:0
 	ALBEDO = n_out3p0;
@@ -285,7 +288,7 @@ void light() {
 
 }
 "
-graph_offset = Vector2( -317.457, 23.6238 )
+graph_offset = Vector2( -291, 158 )
 nodes/vertex/0/position = Vector2( 440, 140 )
 nodes/vertex/2/node = SubResource( 71 )
 nodes/vertex/2/position = Vector2( 120, 180 )
@@ -294,7 +297,7 @@ nodes/fragment/2/node = SubResource( 69 )
 nodes/fragment/2/position = Vector2( 140, 240 )
 nodes/fragment/3/node = SubResource( 70 )
 nodes/fragment/3/position = Vector2( 120, 420 )
-nodes/fragment/connections = PoolIntArray( 3, 0, 0, 0, 2, 1, 0, 1 )
+nodes/fragment/connections = PoolIntArray( 2, 1, 0, 1, 3, 0, 0, 0 )
 
 [sub_resource type="ShaderMaterial" id=73]
 shader = SubResource( 72 )
@@ -336,7 +339,7 @@ void light() {
 
 }
 "
-graph_offset = Vector2( -386.457, 69.6238 )
+graph_offset = Vector2( -294, 69 )
 nodes/fragment/2/node = SubResource( 76 )
 nodes/fragment/2/position = Vector2( 20, 220 )
 nodes/fragment/3/node = SubResource( 77 )
@@ -1821,6 +1824,84 @@ tracks/4/keys = PoolRealArray( 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0.4, 1, 0, 0,
 [sub_resource type="BoxShape" id=68]
 extents = Vector3( 0.191705, 0.219672, 0.259362 )
 
+[sub_resource type="ShaderMaterial" id=94]
+shader = ExtResource( 83 )
+
+[sub_resource type="ShaderMaterial" id=95]
+shader = ExtResource( 83 )
+
+[sub_resource type="ShaderMaterial" id=96]
+shader = ExtResource( 83 )
+
+[sub_resource type="ShaderMaterial" id=97]
+shader = ExtResource( 83 )
+
+[sub_resource type="ShaderMaterial" id=98]
+shader = ExtResource( 83 )
+
+[sub_resource type="ShaderMaterial" id=99]
+shader = ExtResource( 83 )
+
+[sub_resource type="ShaderMaterial" id=100]
+shader = ExtResource( 83 )
+
+[sub_resource type="ShaderMaterial" id=101]
+shader = ExtResource( 83 )
+
+[sub_resource type="ShaderMaterial" id=102]
+shader = ExtResource( 83 )
+
+[sub_resource type="ShaderMaterial" id=103]
+shader = ExtResource( 83 )
+
+[sub_resource type="ShaderMaterial" id=104]
+shader = ExtResource( 83 )
+
+[sub_resource type="ShaderMaterial" id=83]
+shader = ExtResource( 79 )
+
+[sub_resource type="ShaderMaterial" id=84]
+shader = ExtResource( 79 )
+
+[sub_resource type="ShaderMaterial" id=85]
+shader = ExtResource( 79 )
+
+[sub_resource type="ShaderMaterial" id=86]
+shader = ExtResource( 79 )
+
+[sub_resource type="ShaderMaterial" id=87]
+shader = ExtResource( 79 )
+
+[sub_resource type="ShaderMaterial" id=88]
+shader = ExtResource( 79 )
+
+[sub_resource type="ShaderMaterial" id=89]
+shader = ExtResource( 79 )
+
+[sub_resource type="ShaderMaterial" id=90]
+shader = ExtResource( 79 )
+
+[sub_resource type="ShaderMaterial" id=91]
+shader = ExtResource( 79 )
+
+[sub_resource type="ShaderMaterial" id=92]
+shader = ExtResource( 79 )
+
+[sub_resource type="ShaderMaterial" id=93]
+shader = ExtResource( 79 )
+
+[sub_resource type="SpatialMaterial" id=105]
+
+[sub_resource type="SpatialMaterial" id=106]
+next_pass = SubResource( 105 )
+flags_unshaded = true
+params_diffuse_mode = 4
+params_specular_mode = 3
+params_blend_mode = 2
+params_cull_mode = 2
+params_grow = true
+params_grow_amount = 0.634
+
 [node name="House" type="Spatial"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.23029, -2.92914, 11.1863 )
 
@@ -1834,6 +1915,7 @@ mesh = SubResource( 4 )
 
 [node name="ceiling" type="StaticBody" parent="."]
 transform = Transform( 3, 0, 0, 0, 1, 0, 0, 0, 2, 0, 15.3786, 25.0011 )
+visible = false
 
 [node name="CollisionShape" type="CollisionShape" parent="ceiling"]
 shape = SubResource( 3 )
@@ -2420,20 +2502,83 @@ transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 0.502467, 1.10363, -7.46619 )
 [node name="wallclock" parent="." instance=ExtResource( 78 )]
 transform = Transform( -4.37114e-10, 0, -0.01, 0, 0.01, 0, 0.01, 0, -4.37114e-10, 23.4139, 4.608, -8 )
 
+[node name="maderas3_maderas3_mtl_0" parent="wallclock/Sketchfab_model/Pendulum Wall Clockfbx/RootNode/maderas3" index="0"]
+material/0 = SubResource( 94 )
+
+[node name="madreas2_madreas2_mtl_0" parent="wallclock/Sketchfab_model/Pendulum Wall Clockfbx/RootNode/madreas2" index="0"]
+material/0 = SubResource( 95 )
+
+[node name="dorado_dorado_mtl_0" parent="wallclock/Sketchfab_model/Pendulum Wall Clockfbx/RootNode/dorado" index="0"]
+material/0 = SubResource( 96 )
+
+[node name="cromo_cromo_mtl_0" parent="wallclock/Sketchfab_model/Pendulum Wall Clockfbx/RootNode/cromo" index="0"]
+material/0 = SubResource( 97 )
+
+[node name="abajo_abajo_mtl_0" parent="wallclock/Sketchfab_model/Pendulum Wall Clockfbx/RootNode/abajo" index="0"]
+material/0 = SubResource( 98 )
+
+[node name="maderaFlores_maderaFlores_mtl_0" parent="wallclock/Sketchfab_model/Pendulum Wall Clockfbx/RootNode/maderaFlores" index="0"]
+material/0 = SubResource( 99 )
+
+[node name="maderaFlores_maderaFlores_mtl_02" parent="wallclock/Sketchfab_model/Pendulum Wall Clockfbx/RootNode/maderaFlores" index="1"]
+material/0 = SubResource( 100 )
+
+[node name="madera1_madera1_mtl_0" parent="wallclock/Sketchfab_model/Pendulum Wall Clockfbx/RootNode/madera1" index="0"]
+material/0 = SubResource( 101 )
+
+[node name="maderas4_maderas4_mtl_0" parent="wallclock/Sketchfab_model/Pendulum Wall Clockfbx/RootNode/maderas4" index="0"]
+material/0 = SubResource( 102 )
+
+[node name="COLUMNAS_COLUMNAS_mtl_0" parent="wallclock/Sketchfab_model/Pendulum Wall Clockfbx/RootNode/COLUMNAS" index="0"]
+material/0 = SubResource( 103 )
+
+[node name="COLUMNAS_COLUMNAS_mtl_02" parent="wallclock/Sketchfab_model/Pendulum Wall Clockfbx/RootNode/COLUMNAS" index="1"]
+material/0 = SubResource( 104 )
+
+[node name="negroLLAVE_negroLLAVE_mtl_0" parent="wallclock/Sketchfab_model/Pendulum Wall Clockfbx/RootNode/negroLLAVE" index="0"]
+transform = Transform( 1, 1.05879e-22, 7.10543e-15, 0, 1, 2.66454e-15, 0, -2.66454e-15, 1, 0, 0, 0 )
+
 [node name="wallclock2" parent="." instance=ExtResource( 78 )]
 transform = Transform( -4.37114e-10, 0, -0.01, 0, 0.01, 0, 0.01, 0, -4.37114e-10, 23.4139, 4.608, -13 )
 
-[node name="wallclock3" parent="." instance=ExtResource( 78 )]
-transform = Transform( -4.37114e-10, 0, -0.01, 0, 0.01, 0, 0.01, 0, -4.37114e-10, 23.4139, 4.608, -18 )
+[node name="maderas3" parent="wallclock2/Sketchfab_model/Pendulum Wall Clockfbx/RootNode" index="0"]
+transform = Transform( 1, 5.29396e-23, 3.55271e-15, 0, -1, 1.19249e-08, 0, -1.19249e-08, -1, 0, 723.704, 1.60596 )
 
-[node name="cartooncar" parent="." instance=ExtResource( 79 )]
-transform = Transform( -0.3, 0, -4.52987e-08, 0, 0.3, 0, 4.52987e-08, 0, -0.3, 19, 5.476, 19.309 )
+[node name="maderas3_maderas3_mtl_0" parent="wallclock2/Sketchfab_model/Pendulum Wall Clockfbx/RootNode/maderas3" index="0"]
+material/0 = SubResource( 83 )
 
-[node name="cartooncar2" parent="." instance=ExtResource( 79 )]
-transform = Transform( -0.3, 0, -4.52987e-08, 0, 0.3, 0, 4.52987e-08, 0, -0.3, 16, 5.476, 19.309 )
+[node name="madreas2_madreas2_mtl_0" parent="wallclock2/Sketchfab_model/Pendulum Wall Clockfbx/RootNode/madreas2" index="0"]
+material/0 = SubResource( 84 )
 
-[node name="cartooncar3" parent="." instance=ExtResource( 79 )]
-transform = Transform( -0.3, 0, -4.52987e-08, 0, 0.3, 0, 4.52987e-08, 0, -0.3, 13, 5.476, 19.309 )
+[node name="dorado_dorado_mtl_0" parent="wallclock2/Sketchfab_model/Pendulum Wall Clockfbx/RootNode/dorado" index="0"]
+material/0 = SubResource( 85 )
+
+[node name="cromo_cromo_mtl_0" parent="wallclock2/Sketchfab_model/Pendulum Wall Clockfbx/RootNode/cromo" index="0"]
+material/0 = SubResource( 86 )
+
+[node name="abajo_abajo_mtl_0" parent="wallclock2/Sketchfab_model/Pendulum Wall Clockfbx/RootNode/abajo" index="0"]
+material/0 = SubResource( 87 )
+
+[node name="maderaFlores_maderaFlores_mtl_0" parent="wallclock2/Sketchfab_model/Pendulum Wall Clockfbx/RootNode/maderaFlores" index="0"]
+material/0 = SubResource( 88 )
+
+[node name="maderaFlores_maderaFlores_mtl_02" parent="wallclock2/Sketchfab_model/Pendulum Wall Clockfbx/RootNode/maderaFlores" index="1"]
+material/0 = SubResource( 89 )
+
+[node name="VIDRIOS_VIDRIOS_mtl_0" parent="wallclock2/Sketchfab_model/Pendulum Wall Clockfbx/RootNode/VIDRIOS" index="0"]
+transform = Transform( 1, 5.29396e-23, 3.55271e-15, 0, 1, 8.88178e-16, 0, -8.88178e-16, 1, 0, 0, 0 )
+
+[node name="madera1_madera1_mtl_0" parent="wallclock2/Sketchfab_model/Pendulum Wall Clockfbx/RootNode/madera1" index="0"]
+material/0 = SubResource( 90 )
+
+[node name="maderas4_maderas4_mtl_0" parent="wallclock2/Sketchfab_model/Pendulum Wall Clockfbx/RootNode/maderas4" index="0"]
+material/0 = SubResource( 91 )
+
+[node name="COLUMNAS_COLUMNAS_mtl_0" parent="wallclock2/Sketchfab_model/Pendulum Wall Clockfbx/RootNode/COLUMNAS" index="0"]
+material/0 = SubResource( 92 )
+
+[node name="COLUMNAS_COLUMNAS_mtl_02" parent="wallclock2/Sketchfab_model/Pendulum Wall Clockfbx/RootNode/COLUMNAS" index="1"]
+material/0 = SubResource( 93 )
 
 [node name="chandelier" parent="." instance=ExtResource( 80 )]
 transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0.752897, 11.367, -2.63387 )
@@ -2477,3 +2622,17 @@ transform = Transform( -4.37114e-10, 0, -0.01, 0, 0.01, 0, 0.01, 0, -4.37114e-10
 
 [node name="oilpainting2" parent="." instance=ExtResource( 81 )]
 transform = Transform( -4.37114e-10, 0, 0.01, 0, 0.01, 0, -0.01, 0, -4.37114e-10, 22.7615, 4.35824, 13.2751 )
+
+[node name="flatclock" parent="." instance=ExtResource( 82 )]
+transform = Transform( 1.94205e-06, -1.58337e-06, -0.023, 4.75525e-06, 0.022, -1.6549e-06, 0.022, -4.75511e-06, 2.03068e-06, 23.4139, 4.65918, -18 )
+
+[node name="toonball" type="Spatial" parent="."]
+transform = Transform( -4.37114e-10, 0, -0.01, 0, 0.01, 0, 0.01, 0, -4.37114e-10, 15.9367, 7.65821, 17.7984 )
+
+[node name="sphere" type="MeshInstance" parent="toonball"]
+transform = Transform( 10, 0, -9.09495e-13, 0, 10, 0, 9.09495e-13, 0, 10, 127.474, -27.0121, 56.9946 )
+mesh = ExtResource( 84 )
+material/0 = SubResource( 106 )
+
+[editable path="wallclock"]
+[editable path="wallclock2"]

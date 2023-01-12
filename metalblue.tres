@@ -1,0 +1,54 @@
+[gd_resource type="VisualShader" load_steps=4 format=2]
+
+[sub_resource type="VisualShaderNodeColorConstant" id=1]
+constant = Color( 0, 0.615622, 1, 1 )
+
+[sub_resource type="VisualShaderNodeScalarConstant" id=2]
+constant = 0.75
+
+[sub_resource type="VisualShaderNodeScalarConstant" id=3]
+constant = 1.0
+
+[resource]
+code = "shader_type spatial;
+render_mode specular_schlick_ggx, async_visible;
+
+
+
+
+void vertex() {
+// Output:0
+
+}
+
+void fragment() {
+// Color:2
+	vec3 n_out2p0 = vec3(0.000000, 0.615622, 1.000000);
+	float n_out2p1 = 1.000000;
+
+// Scalar:3
+	float n_out3p0 = 0.750000;
+
+// Scalar:4
+	float n_out4p0 = 1.000000;
+
+// Output:0
+	ALBEDO = n_out2p0;
+	METALLIC = n_out3p0;
+	SPECULAR = n_out4p0;
+
+}
+
+void light() {
+// Output:0
+
+}
+"
+graph_offset = Vector2( -1021.31, 14.6545 )
+nodes/fragment/2/node = SubResource( 1 )
+nodes/fragment/2/position = Vector2( -80, 280 )
+nodes/fragment/3/node = SubResource( 2 )
+nodes/fragment/3/position = Vector2( -180, 440 )
+nodes/fragment/4/node = SubResource( 3 )
+nodes/fragment/4/position = Vector2( 160, 420 )
+nodes/fragment/connections = PoolIntArray( 2, 0, 0, 0, 3, 0, 0, 2, 4, 0, 0, 4 )
