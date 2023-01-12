@@ -1915,7 +1915,6 @@ mesh = SubResource( 4 )
 
 [node name="ceiling" type="StaticBody" parent="."]
 transform = Transform( 3, 0, 0, 0, 1, 0, 0, 0, 2, 0, 15.3786, 25.0011 )
-visible = false
 
 [node name="CollisionShape" type="CollisionShape" parent="ceiling"]
 shape = SubResource( 3 )
