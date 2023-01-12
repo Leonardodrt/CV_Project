@@ -18,4 +18,6 @@ Interactactable 3D house developed for Visual Computing
 * Open Godot
 * Select Import from the options on the right
 * Select your unzipped folder and open the project.godot file
+* Open the 'scenes' folder and select 'house_mesh.tscn'
+* Play scene on the top right corner
 * Enjoy! 
